@@ -31,23 +31,46 @@ export default class Customers extends Component {
     return (<div className="addmargin">
       <div className="col-md-3">
         {
-
-          this.state.customerList.data.map(customer => <Panel bsStyle="info" key={customer.name} className="centeralign">
+          <Panel bsStyle="info" className="centeralign">
             <Panel.Heading>
-              <Panel.Title componentClass="h3">{customer.name}</Panel.Title>
+              <Panel.Title componentClass="h3">About me</Panel.Title>
             </Panel.Heading>
             <Panel.Body>
-              <p>{customer.email}</p>
-              <p>{customer.phone}</p>
-              <Button bsStyle="info" onClick={() => this.setState({selectedCustomer: customer.id})}>
-
+              <Button bsStyle="info" >
                 Click to View Details
-
               </Button>
-
             </Panel.Body>
-          </Panel>)
+          </Panel>
+
+          
         }
+
+        {
+          <Panel bsStyle="info" className="centeralign">
+            <Panel.Heading>
+              <Panel.Title componentClass="h3">My portfolio</Panel.Title>
+                </Panel.Heading>
+                <Panel.Body>
+                  <Button bsStyle="info" >
+                    Click to View Details
+                  </Button>
+                </Panel.Body>
+              </Panel>
+        }
+  
+      {
+          <Panel bsStyle="info" className="centeralign">
+            <Panel.Heading>
+              <Panel.Title componentClass="h3">Contact</Panel.Title>
+                </Panel.Heading>
+                <Panel.Body>
+                  <Button bsStyle="info" >
+                    Click to View Details
+                  </Button>
+                </Panel.Body>
+              </Panel>
+      }
+  
       </div>
       <div className="col-md-6">
         <CustomerDetails val={this.state.selectedCustomer}/>

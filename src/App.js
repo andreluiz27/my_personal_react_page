@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Customers from './Customers'
+import Portfolio from './portfolio'
 import { BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom';
 
 
@@ -21,8 +22,11 @@ class App extends Component {
                   <Redirect to="/customerlist"/>
                 )}/>
                  <Route exact path='/customerlist' component={Customers} />
+
           </Switch>
       </div>
+
+      
     </Router>
     );
   }
